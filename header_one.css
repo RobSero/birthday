@@ -1,0 +1,215 @@
+/* --------------------------------------------
+                 SECTION SETUP
+---------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+.page-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  /* background-color: black; */
+  /* z-index: -2; */
+}
+
+/* --------------------------------------------
+               BACKGROUND VIDEO
+---------------------------------------------- */
+
+#background-video {
+  width: 100%;
+  position: absolute;
+  z-index: -1; 
+  background-color: black;
+}
+
+
+/* --------------------------------------------
+                 NAVBAR SETUP
+---------------------------------------------- */
+.fixed-header {
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+}
+
+.nav-flex {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 75px;
+  justify-content: space-between;
+}
+
+.nav-flex-item {
+  width: 300px;
+}
+
+.nav-left {
+  text-align: center;
+}
+
+
+/* --------------------------------------------
+            NAVBAR CONTROLS & HOVER
+---------------------------------------------- */
+
+
+.controls {
+  float: right;
+  top: 40%;
+  height: 25px;
+  right: 30px;
+  width: 30px;
+  position: relative;
+}
+
+.controls:hover {
+  cursor: pointer;
+}
+
+
+.nav-control  {
+  width: 25px;
+  display: block;
+  top: 50%;
+  height: 20px;
+  background-color: green;
+  height: 2px!important;
+  transition: all 0.7s ease;
+  margin: 7px auto;
+  transform-origin: left;
+}
+.nav-control:hover  {
+  cursor: pointer;
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+.burger-rotate-down {
+  transform: rotate(45deg);
+}
+
+.burger-rotate-up {
+  transform: rotate(-45deg);
+} 
+
+
+
+
+/* --------------------------------------------
+                 POPUP NAVBAR
+---------------------------------------------- */
+
+#popup-nav {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: yellow;
+  z-index: 2;
+  padding: 5% 20%;
+}
+
+.popup-nav-list-item {
+  margin: 4rem 0rem;
+  list-style-type: none; 
+}
+.popup-nav-list-item a {
+  font-size: 6rem;
+}
+.popup-nav-list-item a:hover {
+  cursor: pointer;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.open {
+  visibility: visible;
+}
+
+/*    STAGGERED LIST ITEMS FADE IT      */
+.menu-list li {
+  opacity: 0;
+  animation: fade-list-in 1s ease-in forwards;
+}
+
+.menu-list li:nth-child(1) {
+  animation-delay: 200ms;
+}
+.menu-list li:nth-child(2) {
+  animation-delay: 400ms;
+}
+.menu-list li:nth-child(3) {
+  animation-delay: 600ms;
+}
+.menu-list li:nth-child(4) {
+  animation-delay: 800ms;
+}
+.menu-list li:nth-child(5) {
+  animation-delay: 1000ms;
+}
+
+
+@keyframes fade-list-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+.popup-nav-list-item a
+{
+    position: relative;
+}
+
+.popup-nav-list-item a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(10, 8, 8);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.popup-nav-list-item a:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+
+
+
+
+/* --------------------------------------------
+                 SECTION TITLE
+---------------------------------------------- */
+
+.title-container {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+}
+
+
+.section-title span {
+  background-color: black;
+  color: white;
+  font-size: 9rem;
+  padding: 5px;
+}
+
+.section-sub span {
+  background-color: black;
+  color: white;
+  font-size: 3rem;
+  padding: 5px;
+}
